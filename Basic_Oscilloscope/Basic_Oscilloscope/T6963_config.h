@@ -1,0 +1,46 @@
+/*
+ * T6963_config.h
+ *
+ * Created: 12/18/2023 10:18:27 AM
+ *  Author: EngMo
+ */ 
+
+
+#ifndef T6963_CONFIG_H_
+#define T6963_CONFIG_H_
+
+#define T6963_RST_PORT  DIO_PORTC
+#define T6963_RST_PIN   DIO_PIN0
+#define T6963_RW_PORT   DIO_PORTC
+#define T6963_RW_PIN    DIO_PIN1
+#define T6963_RD_PORT   DIO_PORTC
+#define T6963_RD_PIN    DIO_PIN4
+#define T6963_RS_PORT   DIO_PORTC
+#define T6963_RS_PIN    DIO_PIN2
+#define T6963_E_PORT    DIO_PORTC
+#define T6963_E_PIN     DIO_PIN3
+#define T6963_FS_PORT  DIO_PORTC
+#define T6963_FS_PIN   DIO_PIN5
+#define T6963_MD_PORT  DIO_PORTC
+#define T6963_MD_PIN   DIO_PIN6
+
+
+#define T6963_DATA_PORT DIO_PORTD
+
+#define T6963_BUSY_PORT DIO_PORTD
+#define T6963_BUSY0_PIN  DIO_PIN0
+#define T6963_BUSY1_PIN  DIO_PIN1
+
+//Commands
+
+#define T6963_HIGHT               128
+#define T6963_WIDTH               240
+#define T6963_FONT                6
+#define T6963_TEXT_HOME           0x0
+#define T6963_NO_TEXT_LINES       T6963_HIGHT/8
+#define T6963_TEXT_AREA           T6963_WIDTH/T6963_FONT
+#define T6963_GRAPHIC_AREA        T6963_WIDTH/T6963_FONT
+#define T6963_GRAPHIC_HOME        (T6963_TEXT_HOME  + T6963_TEXT_AREA*T6963_NO_TEXT_LINES)          
+#define T6963_OFFSET_REGISTER     0
+
+#endif /* T6963_CONFIG_H_ */
