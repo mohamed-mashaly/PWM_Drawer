@@ -26,7 +26,7 @@ void T6963_Busy(void)
 	DIO_setPinValue(T6963_RW_PORT,T6963_RW_PIN,DIO_PIN_HIGH);
 	DIO_setPinValue(T6963_RD_PORT,T6963_RD_PIN,DIO_PIN_LOW);
 	DIO_setPinValue(T6963_E_PORT,T6963_E_PIN,DIO_PIN_LOW);
-	while(chk!=0b00000011)
+	while(GET_BIT(chk,0)!=1 && GET_BIT(chk,1)!=1)
 	{
 		DIO_getPortValue(T6963_BUSY_PORT,&chk);
 	}
